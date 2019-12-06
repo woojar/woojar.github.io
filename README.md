@@ -1,2 +1,2 @@
 # woojar.github.io
-##woojar's personal blog
+woojar's personal blog
