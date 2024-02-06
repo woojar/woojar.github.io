@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>WOOJAR</title>
+  <icon>https://woojar.com/icon.png</icon>
+  <subtitle>just rambling...</subtitle>
+  <link href="https://woojar.com/atom.xml" rel="self"/>
+  
+  <link href="https://woojar.com/"/>
+  <updated>2024-02-06T03:10:17.323Z</updated>
+  <id>https://woojar.com/</id>
+  
+  <author>
+    <name>Jeffrey Li</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>structured ways of thinking</title>
+    <link href="https://woojar.com/2024/02/05/structured-ways-of-thinking/"/>
+    <id>https://woojar.com/2024/02/05/structured-ways-of-thinking/</id>
+    <published>2024-02-05T06:09:47.000Z</published>
+    <updated>2024-02-06T03:10:17.323Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;I believe that human being is initially not rational, instead emotional. But human being is also social animals. Usually we can connect</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>cmu-cs-undergraduate-courses-list</title>
+    <link href="https://woojar.com/2023/12/30/cmu-cs-undergraduate-courses-list/"/>
+    <id>https://woojar.com/2023/12/30/cmu-cs-undergraduate-courses-list/</id>
+    <published>2023-12-30T03:41:51.000Z</published>
+    <updated>2023-12-30T10:30:49.679Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;CMU-CS-Undergraduate-Courses-List&quot;&gt;&lt;a href=&quot;#CMU-CS-Undergraduate-Courses-List&quot; class=&quot;headerlink&quot; title=&quot;CMU CS Undergraduate</summary>
+        
+      
+    
+    
+    
+    
+    <category term="cmu, cs, courses" scheme="https://woojar.com/tags/cmu-cs-courses/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>I have a learning plan</title>
+    <link href="https://woojar.com/2023/12/25/I-have-a-leaning-plan/"/>
+    <id>https://woojar.com/2023/12/25/I-have-a-leaning-plan/</id>
+    <published>2023-12-25T18:31:23.000Z</published>
+    <updated>2023-12-28T05:05:26.348Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;I was born in a countryside village, and grew up there. To broaden my view, I think it’s an efficient way to learn something from the</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>should-be-memorized</title>
+    <link href="https://woojar.com/2022/12/10/should-be-memorized/"/>
+    <id>https://woojar.com/2022/12/10/should-be-memorized/</id>
+    <published>2022-12-10T18:00:30.000Z</published>
+    <updated>2024-02-05T07:27:30.030Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;My-mortgage-already-be-paid-back-now-we-have-no-debits-anymore-It-should-be-memorized-right&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>practice leetcode according to problem pattern</title>
+    <link href="https://woojar.com/2022/09/18/practice-leecode-according-to-problem-pattern/"/>
+    <id>https://woojar.com/2022/09/18/practice-leecode-according-to-problem-pattern/</id>
+    <published>2022-09-18T16:36:32.000Z</published>
+    <updated>2023-12-28T05:05:25.532Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;I read one article that introduce a effective way to practice leetcode, please check &lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="leetcode, pattern" scheme="https://woojar.com/tags/leetcode-pattern/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vmware_vs_virtualbox</title>
+    <link href="https://woojar.com/2022/09/11/vmware-vs-virtualbox/"/>
+    <id>https://woojar.com/2022/09/11/vmware-vs-virtualbox/</id>
+    <published>2022-09-11T13:06:59.000Z</published>
+    <updated>2023-12-28T05:05:25.264Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Comparsion-between-virtualbox-and-virmware-on-macbook-pro-early-2015&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown Example</title>
+    <link href="https://woojar.com/2022/09/03/Markdown-Example/"/>
+    <id>https://woojar.com/2022/09/03/Markdown-Example/</id>
+    <published>2022-09-03T17:43:45.000Z</published>
+    <updated>2023-12-28T05:05:26.076Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;this-is-header&quot;&gt;&lt;a href=&quot;#this-is-header&quot; class=&quot;headerlink&quot; title=&quot;this is header&quot;&gt;&lt;/a&gt;this is header&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;hi, this is</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>The first day on my vacation</title>
+    <link href="https://woojar.com/2020/06/08/The-first-day-on-my-vacation/"/>
+    <id>https://woojar.com/2020/06/08/The-first-day-on-my-vacation/</id>
+    <published>2020-06-08T16:23:26.000Z</published>
+    <updated>2023-12-28T05:05:27.980Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;A busy year has been past, but I still have quite more annual leave left. Just go for vacation. What should I do in the next week off? I</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>vultr discount and give you 100$ try out</title>
+    <link href="https://woojar.com/2020/02/22/vultr-discount-and-give-you-100-try-out/"/>
+    <id>https://woojar.com/2020/02/22/vultr-discount-and-give-you-100-try-out/</id>
+    <published>2020-02-22T11:36:06.000Z</published>
+    <updated>2023-12-28T05:05:23.908Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Please use below link to register new vultr user and you will get 100$ for your try out.&lt;br&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>testImage</title>
+    <link href="https://woojar.com/2020/01/05/testImage/"/>
+    <id>https://woojar.com/2020/01/05/testImage/</id>
+    <published>2020-01-05T19:37:54.000Z</published>
+    <updated>2023-12-30T10:16:28.852Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/Black-hole.jpg&quot; title=&quot;test&quot;&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Happy new year</title>
+    <link href="https://woojar.com/2020/01/01/Happy-new-year/"/>
+    <id>https://woojar.com/2020/01/01/Happy-new-year/</id>
+    <published>2020-01-01T09:20:07.000Z</published>
+    <updated>2023-12-28T05:05:28.804Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;2020 is a magic number, isn’t it? The next similar number is 2121. But it is about the stuff 100 years later.&lt;br&gt;Please cherish your</summary>
+        
+      
+    
+    
+    
+    
+    <category term="new year" scheme="https://woojar.com/tags/new-year/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test for second post using markdown language</title>
+    <link href="https://woojar.com/2019/12/04/2019-1204-2/"/>
+    <id>https://woojar.com/2019/12/04/2019-1204-2/</id>
+    <published>2019-12-04T19:23:26.000Z</published>
+    <updated>2023-12-28T05:05:24.992Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;Hello-markdown&quot;&gt;&lt;a href=&quot;#Hello-markdown&quot; class=&quot;headerlink&quot; title=&quot;Hello markdown!&quot;&gt;&lt;/a&gt;Hello</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>woojar&#39;s first page on github</title>
+    <link href="https://woojar.com/2019/12/04/first-page/"/>
+    <id>https://woojar.com/2019/12/04/first-page/</id>
+    <published>2019-12-04T18:00:30.000Z</published>
+    <updated>2023-12-28T05:05:24.448Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;http://woojar.com/&quot;&gt;Woojar&lt;/a&gt;! This is my first post on github. Have a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
