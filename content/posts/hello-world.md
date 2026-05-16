@@ -5,8 +5,7 @@ draft = false
 +++
 ## this is my first blog on my new site
 
-hello hugo world!!!
-
+Hello hugo world!!!
 
 BR
 Jeffrey
