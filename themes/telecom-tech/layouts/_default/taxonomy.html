@@ -1,0 +1,29 @@
+{{ define "main" }}
+  <section class="posts-list">
+    <header class="section-header">
+      <h1>
+        {{ if .Data.Term }}
+          {{ .Data.Term }}
+        {{ else }}
+          {{ .Title }}
+        {{ end }}
+      </h1>
+    </header>
+    {{ range .Pages }}
+      <article class="post-preview">
+        <header class="post-preview-header">
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          <div class="post-preview-meta">
+            <time>{{ .Date.Format "January 2, 2006" }}</time>
+          </div>
+        </header>
+        <div class="post-preview-content">
+          {{ .Summary }}
+          {{ if .Truncated }}
+            <a href="{{ .RelPermalink }}" class="read-more">Read more →</a>
+          {{ end }}
+        </div>
+      </article>
+    {{ end }}
+  </section>
+{{ end }}

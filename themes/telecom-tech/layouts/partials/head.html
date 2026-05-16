@@ -1,0 +1,17 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} – {{ .Site.Title }}{{ end }}</title>
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+{{- if .Site.Params.author -}}
+<meta name="author" content="{{ .Site.Params.author }}">
+{{- end }}
+{{- $css := resources.Get "css/telecom-tech/main.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
+{{- if .OutputFormats.Get "rss" }}
+<link rel="alternate" type="application/rss+xml" href="{{ .Site.BaseURL }}index.xml" title="{{ .Site.Title }}" />
+{{- end }}
+{{- if .OutputFormats.Get "json" }}
+<link rel="alternate" type="application/json" href="{{ .Site.BaseURL }}index.json" title="{{ .Site.Title }}" />
+{{- end }}
+<link rel="icon" href="/favicon.ico">

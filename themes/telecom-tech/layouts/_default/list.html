@@ -1,0 +1,40 @@
+{{ define "main" }}
+  {{ if .IsHome }}
+    {{ .Content }}
+  {{ end }}
+
+  <section class="posts-list">
+    {{ if .IsSection }}
+      <header class="section-header">
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}
+          <p class="section-description">{{ . }}</p>
+        {{ end }}
+      </header>
+    {{ end }}
+
+    {{ range .Pages }}
+      <article class="post-preview">
+        <header class="post-preview-header">
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          <div class="post-preview-meta">
+            <time>{{ .Date.Format "January 2, 2006" }}</time>
+            {{ if .Params.tags }}
+              <span class="tags">
+                {{ range first 3 .Params.tags }}
+                  <a href="{{ `tags/` | relURL }}{{ . | urlize }}">#{{ . }}</a>
+                {{ end }}
+              </span>
+            {{ end }}
+          </div>
+        </header>
+        <div class="post-preview-content">
+          {{ .Summary }}
+          {{ if .Truncated }}
+            <a href="{{ .RelPermalink }}" class="read-more">Read more →</a>
+          {{ end }}
+        </div>
+      </article>
+    {{ end }}
+  </section>
+{{ end }}

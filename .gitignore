@@ -1,0 +1,53 @@
+# Hugo output directory
+/public/
+
+# Hugo cache directory
+/resources/_gen/
+
+# Hugo media cache
+/.hugo_cache/
+
+# Build artifacts
+/public/css/
+/public/js/
+/public/fonts/
+/public/images/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+*.swp
+*.swo
+*~
+
+# Hugo build lock file
+.hugo_build.lock
+
+# Log files
+*.log
+
+# Editor files
+*.sublime-project
+*.sublime-workspace
+*.vscode/
+*.idea/
+
+# Node.js dependencies (if you're using npm for anything)
+node_modules/
+
+# Git submodules (if any)
+.gitmodules
+
+# Local configuration files that shouldn't be committed
+config.local.*
+
+# Opencode directory
+/.opencode/
+/.agents/
