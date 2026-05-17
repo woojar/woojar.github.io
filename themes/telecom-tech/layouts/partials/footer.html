@@ -1,16 +1,16 @@
 <footer class="site-footer">
   <div class="footer-content">
-    <div class="footer-section">
-      <h3>Telecom Insights</h3>
-      <p>20 years of telecom expertise distilled into clear insights</p>
+    <div class="footer-section fade-in">
+      <h3>{{ .Site.Params.footerTitle | default "Telecom Insights" }}</h3>
+      <p>{{ .Site.Params.footerDescription | default "Expert insights and technical knowledge" }}</p>
     </div>
-    <div class="footer-section">
+    <div class="footer-section fade-in">
       <h3>Connect</h3>
       <p>{{ .Site.Params.author }}</p>
       <p><a href="https://github.com/woojar">GitHub</a></p>
     </div>
   </div>
-  <div class="footer-bottom">
+  <div class="footer-bottom fade-in">
     <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}. All code samples MIT Licensed.</p>
   </div>
 </footer>

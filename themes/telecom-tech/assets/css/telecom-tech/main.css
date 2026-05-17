@@ -73,6 +73,7 @@ a:hover {
 img {
   max-width: 100%;
   height: auto;
+  loading: lazy;
 }
 
 .site-header {
@@ -122,9 +123,10 @@ img {
   transition: color 0.2s, border-color 0.2s;
 }
 
-.nav-menu a:hover {
+.nav-menu a.active {
   color: #fff;
-  border-bottom-color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+  font-weight: 600;
 }
 
 .main-content {
@@ -324,18 +326,52 @@ img {
   font-size: 1.05rem;
 }
 
+.post-content h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 2.5rem 0 1rem;
+  color: var(--text);
+  line-height: 1.2;
+}
+
 .post-content h2 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   margin: 2rem 0 1rem;
   padding-bottom: 0.3rem;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 2px solid var(--accent);
+  letter-spacing: -0.02em;
 }
 
 .post-content h3 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 600;
   margin: 1.5rem 0 0.75rem;
+  color: var(--primary-dark);
+  letter-spacing: -0.01em;
+}
+
+.post-content h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 1.25rem 0 0.5rem;
+  color: var(--text);
+}
+
+.post-content h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem;
+  color: var(--text-secondary);
+}
+
+.post-content h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem;
+  color: var(--text-secondary);
+  font-style: italic;
 }
 
 .post-content p {
@@ -363,6 +399,7 @@ img {
   padding: 0.15rem 0.4rem;
   border-radius: 4px;
   font-size: 0.9em;
+  font-weight: normal;
 }
 
 .post-content pre {
@@ -373,12 +410,15 @@ img {
   overflow-x: auto;
   margin-bottom: 1.5rem;
   border: 1px solid var(--border);
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
 .post-content pre code {
   background: none;
   padding: 0;
   font-size: 0.9rem;
+  font-weight: normal;
 }
 
 .post-content blockquote {
@@ -576,6 +616,39 @@ img {
   color: rgba(255,255,255,0.7);
 }
 
+/* Add this at the end of the file, before the media queries */
+
+.code-label {
+  background: var(--primary-dark);
+  color: white;
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  border-radius: 4px 4px 0 0;
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  margin-bottom: -0.1rem;
+  border: 1px solid var(--border);
+  border-bottom: none;
+}
+
+.code-block {
+  margin: 0.5rem 0 1.5rem 0;
+  border-radius: 0 0 var(--radius) var(--radius);
+  position: relative;
+}
+
+.code-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(30, 41, 59, 0.1), transparent);
+  border-radius: var(--radius) var(--radius) 0 0;
+  pointer-events: none;
+}
+
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
@@ -630,3 +703,43 @@ img {
     font-size: 1rem;
   }
 }
+
+
+/* Add subtle animations */
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.error-page {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.error-page h1 {
+  font-size: 6rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.error-page p {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+

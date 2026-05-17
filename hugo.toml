@@ -8,20 +8,14 @@ enableEmoji = true
 home = ["HTML", "RSS", "JSON"]
 
 [params]
-env = "production"
+  author = "Woojar"
+  env = "production"
 description = "Telecom software engineer's tech blog - 20 years in telecom software development"
 keywords = ["telecom", "software engineering", "tech", "engineering", "daily life"]
 copyright = "© 2026 Woojar"
 disableBreadcrumb = false
-disableGitInfo = false
-showReadingTime = true
-showWordCount = true
-showShareButtons = true
-showTotalWords = true
-enableInlineShortcodes = true
-disableHugoGeneratorInject = false
-disableThemeToggle = false
-defaultTheme = "light"
+  disableGitInfo = false
+  disableHugoGeneratorInject = false
 
 [[params.social]]
 name = "GitHub"

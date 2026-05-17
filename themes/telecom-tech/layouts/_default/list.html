@@ -13,7 +13,7 @@
       </header>
     {{ end }}
 
-    {{ range .Pages }}
+    {{ range .Paginator.Pages }}
       <article class="post-preview">
         <header class="post-preview-header">
           <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
@@ -37,4 +37,16 @@
       </article>
     {{ end }}
   </section>
+
+  {{ if gt .Paginator.TotalPages 1 }}
+  <nav class="pagination">
+    {{ if .Paginator.HasPrev }}
+      <a href="{{ .Paginator.Prev.URL }}" class="pagination-item">← Previous</a>
+    {{ end }}
+    <span class="pagination-info">Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</span>
+    {{ if .Paginator.HasNext }}
+      <a href="{{ .Paginator.Next.URL }}" class="pagination-item">Next →</a>
+    {{ end }}
+  </nav>
+  {{ end }}
 {{ end }}

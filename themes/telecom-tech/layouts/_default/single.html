@@ -26,6 +26,31 @@
     </div>
   </article>
 
+  <!-- Related Posts Section -->
+  <section class="related-posts">
+    <h3>Related Posts</h3>
+    <div class="related-posts-grid">
+      {{ range first 3 (where (where .Site.RegularPages "Type" "posts") "Params.tags" "intersect" .Params.tags) }}
+        {{ if ne .RelPermalink $.RelPermalink }}
+        <article class="post-preview card-hover">
+          <header class="post-preview-header">
+            <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+            <div class="post-preview-meta">
+              <time>{{ .Date.Format "January 2, 2006" }}</time>
+            </div>
+          </header>
+          <div class="post-preview-content">
+            {{ .Summary }}
+            {{ if .Truncated }}
+              <a href="{{ .RelPermalink }}" class="read-more">Read more →</a>
+            {{ end }}
+          </div>
+        </article>
+        {{ end }}
+      {{ end }}
+    </div>
+  </section>
+
   <nav class="post-nav">
     {{ with .PrevInSection }}
       <a class="post-nav-item post-nav-prev" href="{{ .RelPermalink }}">
