@@ -10,6 +10,9 @@ home = ["HTML", "RSS", "JSON"]
 [params]
   author = "Woojar"
   env = "production"
+
+[build]
+  buildDrafts = false
 description = "Telecom software engineer's tech blog - 20 years in telecom software development"
 keywords = ["telecom", "software engineering", "tech", "engineering", "daily life"]
 copyright = "© 2026 Woojar"
