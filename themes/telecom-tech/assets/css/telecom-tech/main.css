@@ -37,6 +37,10 @@
     --shadow: 0 4px 6px -1px rgba(0,0,0,0.4), 0 2px 4px -2px rgba(0,0,0,0.3);
     --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.5), 0 4px 6px -4px rgba(0,0,0,0.3);
   }
+  body {
+    background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
+  }
+}
 }
 
 *, *::before, *::after {
@@ -49,12 +53,32 @@ html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
 body {
   font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.7;
   color: var(--text);
   background: var(--bg);
+  background-image: radial-gradient(circle at 1px 1px, var(--border) 1px, transparent 0);
+  background-size: 24px 24px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -63,11 +87,21 @@ body {
 a {
   color: var(--primary);
   text-decoration: none;
-  transition: color 0.2s, border-color 0.2s;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
 }
 
 a:hover {
   color: var(--primary-dark);
+}
+
+.post-content a:not([class]) {
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  background: rgba(37, 99, 235, 0.05);
+}
+
+.post-content a:not([class]):hover {
+  background: rgba(37, 99, 235, 0.12);
 }
 
 img {
@@ -135,6 +169,18 @@ img {
   margin: 0 auto;
   padding: 2rem;
   width: 100%;
+  animation: pageFadeIn 0.4s ease-out;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero {
@@ -219,7 +265,8 @@ img {
 .post-summary:hover,
 .post-preview:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-lg), 0 0 20px var(--glow-primary);
+  border-left-color: var(--accent);
 }
 
 .post-summary h3,
@@ -411,7 +458,20 @@ img {
   margin-bottom: 1.5rem;
   border: 1px solid var(--border);
   font-size: 0.9rem;
-  line-height: 1.4;
+  line-height: 1.5;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.3), 0 0 0 1px rgba(37,99,235,0.05);
+  position: relative;
+}
+
+.post-content pre::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  border-radius: var(--radius) var(--radius) 0 0;
 }
 
 .post-content pre code {
