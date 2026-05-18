@@ -536,7 +536,6 @@ div.post-summary-content > *:last-child { margin-bottom: 0; }
   color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: .75rem;
-  white-space: pre-line;
 }
 
 .post-summary-content p,
