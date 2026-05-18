@@ -920,7 +920,41 @@ nav {
 
 .taxonomy-term h3 {
   font-size: 1.1rem;
+  margin: 0;
+  display: inline;
+}
+
+.taxonomy-term-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.taxonomy-term-icon {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.taxonomy-term-count {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
   margin-bottom: 0.5rem;
+}
+
+.taxonomy-term-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.taxonomy-term a.read-more {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .pagination {
