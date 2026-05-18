@@ -525,7 +525,49 @@ nav {
 .post-preview p {
   color: var(--text-secondary);
   line-height: 1.6;
-  margin-bottom: 0.75rem;
+  margin-bottom: .75rem;
+}
+
+div.post-summary-content > *:first-child { margin-top: 0; }
+div.post-summary-content > *:last-child { margin-bottom: 0; }
+
+.post-summary-content,
+.post-preview-content {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: .75rem;
+}
+
+.post-summary-content p,
+.post-preview-content p {
+  margin-bottom: .75rem;
+}
+
+.post-summary-content ul,
+.post-summary-content ol,
+.post-preview-content ul,
+.post-preview-content ol {
+  margin: .5rem 0 .75rem 1.5rem;
+}
+
+.post-summary-content li,
+.post-preview-content li {
+  margin-bottom: .35rem;
+}
+
+.post-summary-content br,
+.post-preview-content br {
+  display: block;
+  content: '';
+  margin: 0.5rem 0;
+}
+
+.read-more {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--primary);
+  font-size: .9rem;
+  margin-top: .5rem;
 }
 
 .post-summary-content {

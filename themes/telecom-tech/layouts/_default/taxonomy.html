@@ -24,7 +24,7 @@
             {{ end }}
           </div>
         </header>
-        <div class="post-preview-content">{{ .Summary | markdownify }}</div>
+        <div class="post-preview-content">{{ .Summary | safeHTML }}</div>
         <a href="{{ .RelPermalink }}" class="read-more">Read more →</a>
       </article>
     {{ end }}
