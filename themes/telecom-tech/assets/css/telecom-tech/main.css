@@ -563,6 +563,16 @@ div.post-summary-content > *:last-child { margin-bottom: 0; }
   margin: 0.5rem 0;
 }
 
+div.post-summary-content,
+div.post-preview-content {
+  line-height: 1.8;
+}
+
+div.post-summary-content > * + *,
+div.post-preview-content > * + * {
+  margin-top: 0.75rem;
+}
+
 .read-more {
   display: inline-block;
   font-weight: 600;
