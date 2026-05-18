@@ -29,10 +29,10 @@ enable = true
 enable = true
 
 [params.giscus]
-repo = ""
-repoId = ""
-category = ""
-categoryId = ""
+repo = "woojar/woojar.gihub.io"
+repoId = "R_kgDOSfOpug"
+category = "General"
+categoryId = "DIC_kwDOSfOpus4C9TYF"
 mapping = "pathname"
 reactionsEnabled = "1"
 inputPosition = "bottom"
