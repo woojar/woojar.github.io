@@ -28,10 +28,35 @@
   </article>
 
   <!-- Related Posts Section -->
+  {{ $related := where (where .Site.RegularPages "Type" "posts") "Params.tags" "intersect" .Params.tags }}
+  {{ $related = where $related "RelPermalink" "!=" .RelPermalink }}
+  {{ if gt (len $related) 0 }}
   <section class="related-posts">
     <h3>Related Posts</h3>
     <div class="related-posts-grid">
-      {{ range first 3 (where (where .Site.RegularPages "Type" "posts") "Params.tags" "intersect" .Params.tags) }}
+      {{ range first 3 $related }}
+        <article class="post-preview card-hover">
+          <header class="post-preview-header">
+            <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+            <div class="post-preview-meta">
+              <time>{{ .Date.Format "January 2, 2006" }}</time>
+            </div>
+          </header>
+          <div class="post-preview-content">
+            {{ .Summary }}
+            {{ if .Truncated }}
+              <a href="{{ .RelPermalink }}" class="read-more">Read more →</a>
+            {{ end }}
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </section>
+  {{ else }}
+  <section class="related-posts">
+    <h3>More Posts</h3>
+    <div class="related-posts-grid">
+      {{ range first 3 (where .Site.RegularPages "Type" "posts") }}
         {{ if ne .RelPermalink $.RelPermalink }}
         <article class="post-preview card-hover">
           <header class="post-preview-header">
@@ -51,6 +76,7 @@
       {{ end }}
     </div>
   </section>
+  {{ end }}
 
   <nav class="post-nav">
     {{ with .PrevInSection }}

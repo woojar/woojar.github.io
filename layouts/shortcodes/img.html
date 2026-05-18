@@ -1,0 +1,40 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" -}}
+{{- $width := .Get "width" -}}
+{{- $height := .Get "height" -}}
+{{- $class := .Get "class" -}}
+{{- $caption := .Get "caption" -}}
+
+{{- $image := "" -}}
+{{- if (urls.Parse $src).Scheme -}}
+  {{- $image = resources.GetRemote $src -}}
+{{- else -}}
+  {{- $image = resources.Get $src -}}
+{{- end -}}
+
+{{- if $image -}}
+  {{- $image = $image -}}
+{{- end -}}
+
+<figure class="{{ if $class }}{{ $class }}{{ else }}figure-image{{ end }}">
+  {{- if $image }}
+  <img
+    src="{{ $image.RelPermalink }}"
+    {{- if $width }} width="{{ $width }}"{{ end }}
+    {{- if $height }} height="{{ $height }}"{{ end }}
+    alt="{{ $alt }}"
+    loading="lazy"
+  />
+  {{- else }}
+  <img
+    src="{{ $src }}"
+    {{- if $width }} width="{{ $width }}"{{ end }}
+    {{- if $height }} height="{{ $height }}"{{ end }}
+    alt="{{ $alt }}"
+    loading="lazy"
+  />
+  {{- end }}
+  {{- if $caption }}
+  <figcaption>{{ $caption }}</figcaption>
+  {{- end }}
+</figure>
