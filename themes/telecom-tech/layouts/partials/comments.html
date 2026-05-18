@@ -1,20 +1,20 @@
 {{- /* comments.html - Giscus Comments Integration */ -}}
-{{- if and .Site.Params.comments.giscus .Site.Params.comments.enable }}
+{{- if and .Site.Params.comments.enable .Site.Params.giscus.repo }}
 <section class="comments" id="comments">
   <h2>Comments</h2>
   <script src="https://giscus.app/client.js"
-    data-repo="{{ .Site.Params.comments.giscus.repo }}"
-    data-repo-id="{{ .Site.Params.comments.giscus.repoId }}"
-    data-category="{{ .Site.Params.comments.giscus.category }}"
-    data-category-id="{{ .Site.Params.comments.giscus.categoryId }}"
-    data-mapping="{{ .Site.Params.comments.giscus.mapping | default "pathname" }}"
-    data-strict="{{ .Site.Params.comments.giscus.strict | default "0" }}"
-    data-reactions-enabled="{{ .Site.Params.comments.giscus.reactionsEnabled | default "1" }}"
-    data-emit-metadata="{{ .Site.Params.comments.giscus.emitMetadata | default "0" }}"
-    data-input-position="{{ .Site.Params.comments.giscus.inputPosition | default "bottom" }}"
-    data-theme="{{ .Site.Params.comments.giscus.theme | default "preferred_color_scheme" }}"
-    data-lang="{{ .Site.Params.comments.giscus.lang | default "en" }}"
-    data-loading="{{ .Site.Params.comments.giscus.loading | default "lazy" }}"
+    data-repo="{{ .Site.Params.giscus.repo }}"
+    data-repo-id="{{ .Site.Params.giscus.repoId }}"
+    data-category="{{ .Site.Params.giscus.category }}"
+    data-category-id="{{ .Site.Params.giscus.categoryId }}"
+    data-mapping="{{ .Site.Params.giscus.mapping | default "pathname" }}"
+    data-strict="{{ .Site.Params.giscus.strict | default "0" }}"
+    data-reactions-enabled="{{ .Site.Params.giscus.reactionsEnabled | default "1" }}"
+    data-emit-metadata="{{ .Site.Params.giscus.emitMetadata | default "0" }}"
+    data-input-position="{{ .Site.Params.giscus.inputPosition | default "bottom" }}"
+    data-theme="{{ .Site.Params.giscus.theme | default "preferred_color_scheme" }}"
+    data-lang="{{ .Site.Params.giscus.lang | default "en" }}"
+    data-loading="{{ .Site.Params.giscus.loading | default "lazy" }}"
     crossorigin="anonymous"
     async></script>
 </section>
