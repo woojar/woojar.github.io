@@ -49,10 +49,10 @@ enable = false
 url = ""
 
 [params.footerTitle]
-default = "Woojar"
+value = "Woojar"
 
 [params.footerDescription]
-default = "Expert insights and technical knowledge"
+value = "Expert insights and technical knowledge"
 
 [[params.social]]
 name = "GitHub"
