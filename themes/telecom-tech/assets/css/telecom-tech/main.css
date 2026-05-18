@@ -536,6 +536,7 @@ div.post-summary-content > *:last-child { margin-bottom: 0; }
   color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: .75rem;
+  white-space: pre-line;
 }
 
 .post-summary-content p,
@@ -560,6 +561,16 @@ div.post-summary-content > *:last-child { margin-bottom: 0; }
   display: block;
   content: '';
   margin: 0.5rem 0;
+}
+
+div.post-summary-content,
+div.post-preview-content {
+  line-height: 1.8;
+}
+
+div.post-summary-content > * + *,
+div.post-preview-content > * + * {
+  margin-top: 0.75rem;
 }
 
 .read-more {
