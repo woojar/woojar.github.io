@@ -4,6 +4,7 @@
       <a href="{{ .Site.BaseURL }}" aria-label="{{ .Site.Title }} home">📡 {{ .Site.Title }}</a>
     </div>
     <div class="header-right">
+      <button class="search-toggle" aria-label="Search" title="Search" onclick="document.getElementById('searchOverlay').classList.add('active'); document.getElementById('searchInput').focus();">🔍</button>
       <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
         <span class="theme-icon">🌙</span>
       </button>

@@ -4,6 +4,7 @@
   {{ partial "head.html" . }}
 </head>
 <body>
+  <div class="reading-progress" id="readingProgress"></div>
   <a href="#main" class="skip-link">Skip to content</a>
   {{ partial "header.html" . }}
   
@@ -12,6 +13,13 @@
   </main>
   
   {{ partial "footer.html" . }}
+  <div class="search-overlay" id="searchOverlay">
+    <button class="search-close" aria-label="Close search">×</button>
+    <div class="search-modal">
+      <input type="text" class="search-input" placeholder="Search posts..." id="searchInput" autocomplete="off">
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
   <button class="back-to-top" aria-label="Back to top">↑</button>
   <script>
     const backToTop = document.querySelector('.back-to-top');
@@ -24,6 +32,88 @@
     });
     backToTop.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Reading progress
+    const readingProgress = document.getElementById('readingProgress');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (scrollTop / docHeight) * 100;
+      readingProgress.style.width = progress + '%';
+    });
+
+    // Search functionality
+    const searchToggle = document.querySelector('.search-toggle');
+    const searchOverlay = document.getElementById('searchOverlay');
+    const searchClose = document.querySelector('.search-close');
+    const searchInput = document.getElementById('searchInput');
+    const searchResults = document.getElementById('searchResults');
+
+    let searchIndex = [];
+
+    async function loadSearchIndex() {
+      if (searchIndex.length === 0) {
+        const response = await fetch('/index.json');
+        const data = await response.json();
+        searchIndex = data;
+      }
+    }
+
+    function performSearch(query) {
+      if (!query.trim()) {
+        searchResults.innerHTML = '';
+        return;
+      }
+      const lowerQuery = query.toLowerCase();
+      const results = searchIndex.filter(post => 
+        post.title.toLowerCase().includes(lowerQuery) ||
+        (post.summary && post.summary.toLowerCase().includes(lowerQuery)) ||
+        (post.tags && post.tags.some(tag => tag.toLowerCase().includes(lowerQuery)))
+      ).slice(0, 10);
+
+      if (results.length === 0) {
+        searchResults.innerHTML = '<div class="search-result"><p>No results found</p></div>';
+        return;
+      }
+
+      searchResults.innerHTML = results.map(post => `
+        <a href="${post.permalink}" class="search-result">
+          <div class="search-result-title">${post.title}</div>
+          <div class="search-result-excerpt">${post.summary || ''}</div>
+        </a>
+      `).join('');
+    }
+
+    searchToggle.addEventListener('click', async () => {
+      await loadSearchIndex();
+      searchOverlay.classList.add('active');
+      searchInput.focus();
+    });
+
+    searchClose.addEventListener('click', () => {
+      searchOverlay.classList.remove('active');
+    });
+
+    searchOverlay.addEventListener('click', (e) => {
+      if (e.target === searchOverlay) {
+        searchOverlay.classList.remove('active');
+      }
+    });
+
+    searchInput.addEventListener('input', (e) => {
+      performSearch(e.target.value);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && searchOverlay.classList.contains('active')) {
+        searchOverlay.classList.remove('active');
+      }
+      if (e.key === '/' && !searchOverlay.classList.contains('active') && 
+          !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
+        e.preventDefault();
+        searchToggle.click();
+      }
     });
   </script>
 </body>
