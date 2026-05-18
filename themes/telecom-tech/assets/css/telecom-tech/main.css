@@ -529,6 +529,25 @@ nav {
   margin-bottom: 0.75rem;
 }
 
+.post-summary p,
+.post-preview p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.post-summary ul,
+.post-preview ul {
+  margin: 0.5rem 0 0.75rem 1.25rem;
+  color: var(--text-secondary);
+}
+
+.post-summary li,
+.post-preview li {
+  margin-bottom: 0.35rem;
+  line-height: 1.5;
+}
+
 .post-meta time,
 .post-preview-meta time {
   font-weight: 500;
