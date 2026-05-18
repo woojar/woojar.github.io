@@ -1,4 +1,10 @@
 {{ define "main" }}
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="{{ .Site.BaseURL }}">Home</a></li>
+      <li aria-current="page">404</li>
+    </ol>
+  </nav>
   <div class="error-page">
     <div class="error-content">
       <h1>404</h1>
@@ -12,4 +18,5 @@
       </ul>
     </div>
   </div>
+  {{ partial "newsletter.html" . }}
 {{ end }}

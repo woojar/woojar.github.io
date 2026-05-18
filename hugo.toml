@@ -7,18 +7,52 @@ enableEmoji = true
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 
-[params]
-  author = "Woojar"
-  env = "production"
-
 [build]
-  buildDrafts = false
+buildDrafts = false
+
+[params]
+author = "Woojar"
 description = "Telecom software engineer's tech blog - 20 years in telecom software development"
 keywords = ["telecom", "software engineering", "tech", "engineering", "daily life"]
 copyright = "© 2026 Woojar"
 disableBreadcrumb = false
-  disableGitInfo = false
-  disableHugoGeneratorInject = false
+disableGitInfo = false
+disableHugoGeneratorInject = false
+
+[params.analytics]
+id = ""
+
+[params.share]
+enable = true
+
+[params.comments]
+enable = true
+
+[params.giscus]
+repo = ""
+repoId = ""
+category = ""
+categoryId = ""
+mapping = "pathname"
+reactionsEnabled = "1"
+inputPosition = "bottom"
+theme = "preferred_color_scheme"
+lang = "en"
+
+[params.authorBio]
+enable = true
+avatar = ""
+bio = "20 years in telecom software development. Sharing technical insights and engineering journey."
+
+[params.newsletter]
+enable = false
+url = ""
+
+[params.footerTitle]
+default = "Woojar"
+
+[params.footerDescription]
+default = "Expert insights and technical knowledge"
 
 [[params.social]]
 name = "GitHub"
@@ -36,21 +70,21 @@ url = "/posts/"
 weight = 2
 
 [[menus.main]]
-  name = "Tags"
-  url = "/tags/"
-  weight = 3
+name = "Tags"
+url = "/tags/"
+weight = 3
 
 [[menus.main]]
-  name = "Categories"
-  url = "/categories/"
-  weight = 4
+name = "Categories"
+url = "/categories/"
+weight = 4
 
 [[menus.main]]
-  name = "Archive"
-  url = "/archives/"
-  weight = 5
+name = "Archive"
+url = "/archives/"
+weight = 5
 
 [[menus.main]]
-  name = "About"
-  url = "/about/"
-  weight = 6
+name = "About"
+url = "/about/"
+weight = 6
