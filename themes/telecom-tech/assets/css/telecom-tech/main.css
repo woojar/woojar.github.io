@@ -23,6 +23,11 @@
   --font-mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;
 }
 
+@font-face {
+  font-family: 'System UI';
+  font-display: swap;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #e2e8f0;
@@ -154,16 +159,9 @@ img {
 
 .site-header ul,
 .site-header ol,
-.site-header li {
-  list-style: none;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
+.site-header li,
 .site-header button {
   list-style: none;
-  list-style-type: none;
   margin: 0;
   padding: 0;
 }
@@ -176,12 +174,6 @@ img {
   padding: 0;
   margin: 0;
   margin-left: auto;
-}
-
-.header-right * {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .theme-toggle {
@@ -1006,37 +998,6 @@ nav {
 }
 
 /* Add this at the end of the file, before the media queries */
-
-.code-label {
-  background: var(--primary-dark);
-  color: white;
-  display: inline-block;
-  padding: 0.1rem 0.5rem;
-  border-radius: 4px 4px 0 0;
-  font-size: 0.8rem;
-  font-family: var(--font-mono);
-  margin-bottom: -0.1rem;
-  border: 1px solid var(--border);
-  border-bottom: none;
-}
-
-.code-block {
-  margin: 0.5rem 0 1.5rem 0;
-  border-radius: 0 0 var(--radius) var(--radius);
-  position: relative;
-}
-
-.code-block::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 40px;
-  background: linear-gradient(to bottom, rgba(30, 41, 59, 0.1), transparent);
-  border-radius: var(--radius) var(--radius) 0 0;
-  pointer-events: none;
-}
 
 @media (max-width: 768px) {
   .header-container {

@@ -22,26 +22,39 @@
   </div>
   <button class="back-to-top" aria-label="Back to top">↑</button>
   <script>
+    // Throttle function
+    function throttle(func, limit) {
+      let inThrottle;
+      return function(...args) {
+        if (!inThrottle) {
+          func.apply(this, args);
+          inThrottle = true;
+          setTimeout(() => inThrottle = false, limit);
+        }
+      };
+    }
+
     const backToTop = document.querySelector('.back-to-top');
-    window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', throttle(() => {
       if (window.scrollY > 300) {
         backToTop.classList.add('visible');
       } else {
         backToTop.classList.remove('visible');
       }
-    });
+    }, 100));
+
     backToTop.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // Reading progress
+    // Reading progress - throttled
     const readingProgress = document.getElementById('readingProgress');
-    window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', throttle(() => {
       const scrollTop = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const progress = (scrollTop / docHeight) * 100;
       readingProgress.style.width = progress + '%';
-    });
+    }, 50));
 
     // Search functionality
     const searchToggle = document.querySelector('.search-toggle');
@@ -51,18 +64,35 @@
     const searchResults = document.getElementById('searchResults');
 
     let searchIndex = [];
+    let searchLoaded = false;
 
     async function loadSearchIndex() {
-      if (searchIndex.length === 0) {
-        const response = await fetch('/index.json');
-        const data = await response.json();
-        searchIndex = data;
+      if (!searchLoaded) {
+        try {
+          const response = await fetch('/index.json');
+          const data = await response.json();
+          searchIndex = data;
+          searchLoaded = true;
+        } catch (e) {
+          console.error('Failed to load search index');
+        }
       }
+    }
+
+    // Preload search index on idle
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(() => loadSearchIndex());
+    } else {
+      setTimeout(loadSearchIndex, 3000);
     }
 
     function performSearch(query) {
       if (!query.trim()) {
         searchResults.innerHTML = '';
+        return;
+      }
+      if (searchIndex.length === 0) {
+        searchResults.innerHTML = '<div class="search-result"><p>Loading...</p></div>';
         return;
       }
       const lowerQuery = query.toLowerCase();
