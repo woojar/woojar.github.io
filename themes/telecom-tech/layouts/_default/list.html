@@ -29,6 +29,7 @@
           </div>
         </header>
         <div class="post-preview-content">{{ .Summary | safeHTML }}</div>
+        <a href="{{ .RelPermalink }}" class="read-more">Read more →</a>
       </article>
     {{ end }}
   </section>
