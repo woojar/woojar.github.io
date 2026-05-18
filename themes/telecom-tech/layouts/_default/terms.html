@@ -6,7 +6,7 @@
     <div class="taxonomy-terms">
       {{ range .Pages }}
         <article class="taxonomy-term">
-          <h3><a href="{{ .RelPermalink }}">{{ .Title | humanize | title }}</a></h3>
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
           <a href="{{ .RelPermalink }}" class="read-more">{{ len .Pages }} posts →</a>
         </article>
       {{ end }}
