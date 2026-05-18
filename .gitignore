@@ -13,6 +13,10 @@
 /public/fonts/
 /public/images/
 
+#obsidian vault
+.vault/
+content/posts/.obsidian/
+
 # OS generated files
 .DS_Store
 .DS_Store?
