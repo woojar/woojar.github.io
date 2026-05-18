@@ -24,12 +24,7 @@
             {{ end }}
           </div>
         </header>
-        <div class="post-preview-content">
-          {{ .Summary }}
-          {{ if .Truncated }}
-            <a href="{{ .RelPermalink }}" class="read-more">Read more →</a>
-          {{ end }}
-        </div>
+        <div class="post-preview-content">{{ .Summary | safeHTML }}</div>
       </article>
     {{ end }}
   </section>
