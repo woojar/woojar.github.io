@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /search/
+Disallow: /404.html
+
+Sitemap: https://woojar.com/sitemap.xml
