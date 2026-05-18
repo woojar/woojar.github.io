@@ -3,6 +3,7 @@ title: "broaden-your-view"
 date: 2024-02-24T00:00:00+08:00
 draft: false
 tags: ['thinking']
+categories: ["Thinking"]
 ---
 
 How to broaden your view, here are my ideas in terms of my situation, for your reference:

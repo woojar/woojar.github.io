@@ -3,6 +3,7 @@ title: "structured ways of thinking"
 date: 2024-02-05T00:00:00+08:00
 draft: false
 tags: ['thinking']
+categories: ["Thinking"]
 ---
 
 I believe that human being is initially not rational, instead emotional. But human being is also social animals. Usually we can connect each other by our emotion in social network. But doing business or work is more rational. How to train our brain working in a rational way is mostly critical to success.

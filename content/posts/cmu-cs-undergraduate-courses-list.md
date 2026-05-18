@@ -3,6 +3,7 @@ title: "cmu-cs-undergraduate-courses-list"
 date: 2023-12-30T00:00:00+08:00
 draft: false
 tags: ['cmu', 'cs', 'courses', 'learning']
+categories: ["Learning"]
 ---
 
 CMU CS Undergraduate Courses ListHere is a list of undergraduate courses offered by the Computer Science department at Carnegie Mellon University. This list is not exhaustive and is subject to change. Please refer to the official course catalog for the most up-to-date information.

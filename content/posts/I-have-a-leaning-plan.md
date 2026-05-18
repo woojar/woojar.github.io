@@ -3,6 +3,7 @@ title: "I have a learning plan"
 date: 2023-12-25T00:00:00+08:00
 draft: false
 tags: ['learning']
+categories: ["Learning"]
 ---
 
 I was born in a countryside village, and grew up there. To broaden my view, I think it’s an efficient way to learn something from the interview to the famous people such Elon Musk, Jeff Bezos etc. 

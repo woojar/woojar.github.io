@@ -3,6 +3,7 @@ title: "vmware_vs_virtualbox"
 date: 2022-09-11T00:00:00+08:00
 draft: false
 tags: ['tech']
+categories: ["Tech"]
 ---
 
 Comparsion between virtualbox and virmware on macbook pro early 2015My macbook pro is relatively old, the performance of VM app is more important. Here are some issues I encoutered during using windows 7 on Vmware fusion pro and virtual box.  
