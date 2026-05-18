@@ -2,7 +2,7 @@
 title: "About Me"
 ---
 
-## Hello, I'm Woojar
+## Hello, I'm Jeffrey Li.
 
 I'm a **telecom software engineer** with over **20 years of experience** in the telecommunications industry.
 
