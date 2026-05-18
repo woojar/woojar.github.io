@@ -19,7 +19,7 @@
           <span>{{ .ReadingTime }} min read</span> |
           <span>{{ .WordCount }} words</span>
         </div>
-        <p>{{ .Summary | safeHTML }}</p>
+        <div class="post-summary-content">{{ .Summary }}</div>
         <a href="{{ .RelPermalink }}" class="read-more">Read more →</a>
       </article>
     {{ end }}
