@@ -30,7 +30,7 @@
 <meta name="twitter:image" content="{{ .Site.BaseURL }}og-image.png">
 {{- end }}
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-{{- $css := resources.Get "css/telecom-tech/main.css" | minify | fingerprint }}
+{{- $css := resources.Get "css/main.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
 {{- if .OutputFormats.Get "rss" }}
 <link rel="alternate" type="application/rss+xml" href="{{ .Site.BaseURL }}index.xml" title="{{ .Site.Title }}" />

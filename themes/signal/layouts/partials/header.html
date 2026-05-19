@@ -1,0 +1,25 @@
+<header class="site-header">
+  <div class="header-container">
+    <div class="logo">
+      <a href="/" aria-label="{{ .Site.Title }} home">{{ with .Site.Params.logoIcon }}📡 {{ end }}{{ .Site.Title }}</a>
+    </div>
+    <div class="header-right">
+      <button class="search-toggle" aria-label="Search" title="Search" onclick="document.getElementById('searchOverlay').classList.add('active'); document.getElementById('searchInput').focus();">🔍</button>
+      <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon">🌙</span>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <nav>
+      <ul class="nav-menu" role="navigation">
+        {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL }}" {{ if eq $.RelPermalink .URL }}class="active"{{ end }}>{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,45 @@
+baseURL = "https://example.com/"
+title = "My Blog — Signal Theme Demo"
+theme = "signal"
+
+[params]
+  author = "Your Name"
+  description = "A technical blog powered by the Signal Hugo theme"
+  footerTitle = "My Blog — Signal Theme Demo"
+  footerDescription = "A modern Hugo blog theme for technical writers."
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[params.authorBio]
+  enable = true
+  avatar = ""
+
+[params.share]
+  enable = true
+
+[[params.social]]
+  name = "GitHub"
+  url = "https://github.com/your-username"
+
+[menus]
+  [[menus.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menus.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 2
+  [[menus.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 3
+  [[menus.main]]
+    name = "Categories"
+    url = "/categories/"
+    weight = 4
+  [[menus.main]]
+    name = "About"
+    url = "/about/"
+    weight = 5

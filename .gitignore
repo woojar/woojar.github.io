@@ -55,3 +55,4 @@ config.local.*
 # Opencode directory
 /.opencode/
 /.agents/
+/.kilo/

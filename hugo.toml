@@ -1,6 +1,6 @@
 baseURL = 'https://woojar.com/'
 title = 'Woojar - Tech & Engineering Blog'
-theme = 'telecom-tech'
+theme = 'signal'
 defaultContentLanguage = 'en'
 enableEmoji = true
 
