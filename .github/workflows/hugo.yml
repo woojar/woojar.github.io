@@ -65,11 +65,18 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Download artifact
+      - name: Download artifact for gh-pages
         uses: actions/download-artifact@v4
         with:
           name: github-pages
-          path: ./public
+          path: ./downloaded-artifact
+      - name: Extract artifact
+        run: |
+          mkdir -p ./public
+          cd downloaded-artifact
+          tar -xf artifact.tar -C ../public
+          cd ..
+          rm -rf downloaded-artifact
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
