@@ -42,6 +42,7 @@ Thumbs.db
 *.sublime-workspace
 *.vscode/
 *.idea/
+*.obsidian/
 
 # Node.js dependencies (if you're using npm for anything)
 node_modules/
