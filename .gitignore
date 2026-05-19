@@ -43,7 +43,7 @@ Thumbs.db
 *.vscode/
 *.idea/
 *.obsidian/
-
+*.templates/
 # Node.js dependencies (if you're using npm for anything)
 node_modules/
 
