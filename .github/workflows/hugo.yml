@@ -70,10 +70,6 @@ jobs:
         with:
           name: github-pages
           path: ./public
-      - name: Checkout for gh-pages
-        uses: actions/checkout@v4
-        with:
-          ref: main
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
