@@ -49,11 +49,8 @@ bio = "20 years in telecom software development. Sharing technical insights and 
 enable = false
 url = ""
 
-[params.footerTitle]
-value = "Woojar"
-
-[params.footerDescription]
-value = "Expert insights and technical knowledge"
+footerTitle = "Woojar"
+footerDescription = "Expert insights and technical knowledge"
 
 [[params.social]]
 name = "GitHub"
