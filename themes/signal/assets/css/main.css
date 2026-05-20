@@ -1202,33 +1202,10 @@ nav {
     background: var(--bg-header);
     flex-direction: column;
     padding: 1rem;
-    gap: 0.5rem;
+    gap: 0;
     border-top: 1px solid var(--border);
     list-style: none;
-  }
-
-  .nav-menu.active {
-    display: flex;
-  }
-
-  .nav-menu li {
-    text-align: center;
-    list-style: none;
-  }
-
-  .nav-menu a {
-    display: block;
-    padding: 0.5rem;
-    border-bottom: none;
-  }
-
-  .nav-menu a.active {
-    border-bottom: none;
-    color: var(--accent-light);
-  }
-
-  .nav-menu {
-    gap: 0;
+    z-index: 99;
   }
 
   .hero-content h1 {
