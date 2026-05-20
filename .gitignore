@@ -1,6 +1,8 @@
 # Hugo output directory
 /public/
 
+/content/obsidian*
+
 # Hugo cache directory
 /resources/_gen/
 
