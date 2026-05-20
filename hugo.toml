@@ -19,6 +19,8 @@ disableBreadcrumb = false
 disableGitInfo = false
 disableHugoGeneratorInject = false
 logoIcon = "📡"
+footerTitle = "Woojar"
+footerDescription = "Expert insights and technical knowledge"
 
 [params.analytics]
 id = ""
@@ -48,9 +50,6 @@ bio = "20 years in telecom software development. Sharing technical insights and 
 [params.newsletter]
 enable = false
 url = ""
-
-footerTitle = "Woojar"
-footerDescription = "Expert insights and technical knowledge"
 
 [[params.social]]
 name = "GitHub"
