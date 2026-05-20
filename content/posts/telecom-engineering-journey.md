@@ -4,7 +4,7 @@ date: 2026-05-16T20:00:00+08:00
 draft: false
 tags: ["telecom", "engineering", "career"]
 categories: ["Engineering"]
-summary: "Looking back at my 20 years in telecom software development, I've witnessed incredible technological transformations. From circuit-switched networks to cloud-native telecom solutions, it's been an amazing journey."
+summary: ""
 ---
 
 ## A Journey Through Telecom Evolution
