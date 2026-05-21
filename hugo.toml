@@ -51,6 +51,9 @@ bio = "20 years in telecom software development. Sharing technical insights and 
 enable = false
 url = ""
 
+[params.footerPoweredBy]
+enable = true
+
 [[params.social]]
 name = "GitHub"
 url = "https://github.com/woojar"
