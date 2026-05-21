@@ -1,7 +1,7 @@
 ---
 title: "Markdown example"
 date: 2022-09-03T00:00:00+08:00
-aliases: ["/2022/09/03/markdown-example/"]
+aliases: ["/2022/09/03/Markdown-Example/"]
 draft: false
 tags: ['tech','markdown']
 categories: ["Tech"]

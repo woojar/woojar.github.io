@@ -1,7 +1,7 @@
 ---
 title: "The first day on my vacation"
 date: 2020-06-08T00:00:00+08:00
-aliases: ["/2020/06/08/the-first-day-on-my-vacation/"]
+aliases: ["/2020/06/08/The-first-day-on-my-vacation/"]
 draft: false
 tags: ['daily life']
 categories: ["Daily Life"]
