@@ -20,8 +20,8 @@ disableGitInfo = false
 disableHugoGeneratorInject = false
 logoIcon = "📡"
 footerTitle = "Woojar"
-  footerDescription = "Expert insights and technical knowledge"
-  footerLicense = "All code samples MIT Licensed."
+footerDescription = "Expert insights and technical knowledge"
+footerLicense = "All code samples MIT Licensed."
 
 [params.analytics]
 id = ""
@@ -51,6 +51,10 @@ bio = "20 years in telecom software development. Sharing technical insights and 
 [params.newsletter]
 enable = false
 url = ""
+
+[[params.social]]
+name = "GitHub"
+url = "https://github.com/woojar"
 
 [menus]
 [[menus.main]]
