@@ -19,27 +19,27 @@ ignoreFiles = ["obsidian-templates/*", ".obsidian/*"]
       
     [[languages.en.menus.main]]
       name = "Posts"
-      url = "/posts/"
+      pageRef = "posts"
       weight = 2
       
     [[languages.en.menus.main]]
       name = "Tags"
-      url = "/tags/"
+      pageRef = "tags"
       weight = 3
       
     [[languages.en.menus.main]]
       name = "Categories"
-      url = "/categories/"
+      pageRef = "categories"
       weight = 4
       
     [[languages.en.menus.main]]
       name = "Archive"
-      url = "/archives/"
+      pageRef = "archives"
       weight = 5
       
     [[languages.en.menus.main]]
       name = "About"
-      url = "/about/"
+      pageRef = "about"
       weight = 6
   [languages.zh]
     contentDir = 'content/zh'
@@ -54,27 +54,27 @@ ignoreFiles = ["obsidian-templates/*", ".obsidian/*"]
       
     [[languages.zh.menus.main]]
       name = "文章"
-      url = "/posts/"
+      pageRef = "posts"
       weight = 2
       
     [[languages.zh.menus.main]]
       name = "标签"
-      url = "/tags/"
+      pageRef = "tags"
       weight = 3
       
     [[languages.zh.menus.main]]
       name = "分类"
-      url = "/categories/"
+      pageRef = "categories"
       weight = 4
       
     [[languages.zh.menus.main]]
       name = "归档"
-      url = "/archives/"
+      pageRef = "archives"
       weight = 5
       
     [[languages.zh.menus.main]]
       name = "关于"
-      url = "/about/"
+      pageRef = "about"
       weight = 6
 title = "Woojar - 技术与工程博客"
 
@@ -129,34 +129,3 @@ url = ""
 [[params.social]]
 name = "GitHub"
 url = "https://github.com/woojar"
-
-[menus]
-[[menus.main]]
-name = "Home"
-url = "/"
-weight = 1
-
-[[menus.main]]
-name = "Posts"
-url = "/posts/"
-weight = 2
-
-[[menus.main]]
-name = "Tags"
-url = "/tags/"
-weight = 3
-
-[[menus.main]]
-name = "Categories"
-url = "/categories/"
-weight = 4
-
-[[menus.main]]
-name = "Archive"
-url = "/archives/"
-weight = 5
-
-[[menus.main]]
-name = "About"
-url = "/about/"
-weight = 6

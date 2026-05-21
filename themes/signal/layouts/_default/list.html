@@ -18,18 +18,18 @@
         <header class="post-preview-header">
           <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
           <div class="post-preview-meta">
-            <time>{{ .Date.Format "January 2, 2006" }}</time>
+            <time>{{ .Date | time.Format ":date_long" }}</time>
             {{ if .Params.tags }}
               <span class="tags">
                 {{ range first 3 .Params.tags }}
-                  <a href="{{ `tags/` | relURL }}{{ . | urlize }}">#{{ . }}</a>
+                  <a href="{{ `tags/` | relLangURL }}{{ . | urlize }}">#{{ . }}</a>
                 {{ end }}
               </span>
             {{ end }}
           </div>
         </header>
         <div class="post-preview-content">{{ .Summary | safeHTML }}</div>
-        <a href="{{ .RelPermalink }}" class="read-more">Read more →</a>
+        <a href="{{ .RelPermalink }}" class="read-more">{{ i18n "read_more" | default "Read more →" }}</a>
       </article>
     {{ end }}
   </section>
@@ -37,11 +37,11 @@
   {{ if gt .Paginator.TotalPages 1 }}
   <nav class="pagination">
     {{ if .Paginator.HasPrev }}
-      <a href="{{ .Paginator.Prev.URL }}" class="pagination-item">← Previous</a>
+      <a href="{{ .Paginator.Prev.URL }}" class="pagination-item">{{ i18n "pagination_previous" | default "← Previous" }}</a>
     {{ end }}
-    <span class="pagination-info">Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</span>
+    <span class="pagination-info">{{ i18n "pagination_info" . }}</span>
     {{ if .Paginator.HasNext }}
-      <a href="{{ .Paginator.Next.URL }}" class="pagination-item">Next →</a>
+      <a href="{{ .Paginator.Next.URL }}" class="pagination-item">{{ i18n "pagination_next" | default "Next →" }}</a>
     {{ end }}
   </nav>
   {{ end }}

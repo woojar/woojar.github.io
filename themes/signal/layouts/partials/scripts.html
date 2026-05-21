@@ -77,31 +77,6 @@
     setDarkTheme();
   }
 
-  // Language switcher
-  const languageToggle = document.querySelector('.language-toggle');
-  const languageMenu = document.querySelector('.language-menu');
-
-  if (languageToggle && languageMenu) {
-    languageToggle.addEventListener('click', (e) => {
-      e.stopPropagation();
-      languageMenu.classList.toggle('show');
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!languageToggle.contains(e.target) && !languageMenu.contains(e.target)) {
-        languageMenu.classList.remove('show');
-      }
-    });
-
-    // Close menu when clicking a language option
-    languageMenu.addEventListener('click', (e) => {
-      if (e.target.tagName === 'A') {
-        languageMenu.classList.remove('show');
-      }
-    });
-  }
-
   // Search functionality
   const searchToggle = document.querySelector('.search-toggle');
   const searchOverlay = document.getElementById('searchOverlay');
@@ -115,7 +90,7 @@
   async function loadSearchIndex() {
     if (!searchLoaded) {
       try {
-        const response = await fetch('/index.json');
+        const response = await fetch('{{ "index.json" | relLangURL }}');
         const data = await response.json();
         searchIndex = data;
         searchLoaded = true;
@@ -138,7 +113,7 @@
       return;
     }
     if (searchIndex.length === 0) {
-      searchResults.innerHTML = '<div class="search-result"><p>Loading...</p></div>';
+      searchResults.innerHTML = '<div class="search-result"><p>{{ i18n "loading" | default "Loading..." }}</p></div>';
       return;
     }
     const lowerQuery = query.toLowerCase();
@@ -149,7 +124,7 @@
     ).slice(0, 10);
 
     if (results.length === 0) {
-      searchResults.innerHTML = '<div class="search-result"><p>No results found</p></div>';
+      searchResults.innerHTML = '<div class="search-result"><p>{{ i18n "no_results" | default "No results found" }}</p></div>';
       return;
     }
 

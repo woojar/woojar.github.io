@@ -17,34 +17,53 @@ view_all_posts: "浏览所有文章"
 no_posts: "没有找到文章"
 back_to_top: "返回顶部"
 search_placeholder: "搜索文章..."
+close: "关闭搜索"
 no_results: "未找到结果"
 loading: "加载中..."
 
 # Post
 min_read: "分钟阅读"
 words: "字数"
-previous: "上一篇"
-next: "下一篇"
+previous: "← 上一篇"
+next: "下一篇 →"
 related_posts: "相关文章"
 more_posts: "更多文章"
+
+# Pagination
+pagination_previous: "← 上一页"
+pagination_next: "下一页 →"
+pagination_info: "第 {{ .Paginator.PageNumber }} 页，共 {{ .Paginator.TotalPages }} 页"
 
 # Taxonomy
 all_tags: "所有标签"
 all_categories: "所有分类"
 posts_count: "{{ .Count }} 篇文章"
+terms_count: "{{ .Count }} 个条目"
+taxonomy_post_count: "{{ .Count }} 篇文章"
 
 # Archive
 archive_title: "归档"
 browse_by_year: "按年份浏览"
 
 # 404
-page_not_found: "页面未找到"
+page_not_found: "哎呀！您访问的页面不存在。"
 go_home: "返回主页"
-browse_posts: "浏览文章"
+browse_posts: "浏览所有文章"
 explore_topics: "探索主题"
 view_categories: "查看分类"
+error_suggestion: "您可以尝试："
+
+# Share
+share_label: "分享："
+copy_link: "复制链接"
+copied: "已复制！"
 
 # Footer
+footer_connect: "联系"
+footer_site: "站点"
+footer_sitemap: "站点地图"
+footer_powered: "由"
+footer_theme: "主题由"
 footer_title: "联系"
 footer_copyright: "版权所有。"
 

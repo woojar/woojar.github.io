@@ -5,7 +5,7 @@
       <p>{{ .Site.Params.footerDescription | default "A modern Hugo blog theme for technical writers." }}</p>
     </div>
     <div class="footer-section fade-in">
-      <h3>Connect</h3>
+      <h3>{{ i18n "footer_connect" | default "Connect" }}</h3>
       <p>
         {{- $social := .Site.Params.social -}}
         {{- range $i, $s := $social -}}
@@ -14,12 +14,12 @@
       </p>
     </div>
     <div class="footer-section fade-in">
-      <h3>Site</h3>
-      <p><a href="/sitemap.xml">Sitemap</a></p>
+      <h3>{{ i18n "footer_site" | default "Site" }}</h3>
+      <p><a href="/sitemap.xml">{{ i18n "footer_sitemap" | default "Sitemap" }}</a></p>
     </div>
   </div>
   <div class="footer-bottom fade-in">
     <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}. {{ .Site.Params.footerLicense | default "All code samples MIT Licensed." }}</p>
-    <p>Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>. Theme by <a href="https://github.com/woojar/hugo-theme-signal" target="_blank" rel="noopener noreferrer">woojar</a>.</p>
+    <p>{{ i18n "footer_powered" | default "Powered by" }} <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>. {{ i18n "footer_theme" | default "Theme by" }} <a href="https://github.com/woojar/hugo-theme-signal" target="_blank" rel="noopener noreferrer">woojar</a>.</p>
   </div>
 </footer>

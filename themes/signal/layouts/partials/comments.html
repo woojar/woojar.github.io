@@ -13,7 +13,7 @@
     data-emit-metadata="{{ .Site.Params.giscus.emitMetadata | default "0" }}"
     data-input-position="{{ .Site.Params.giscus.inputPosition | default "bottom" }}"
     data-theme="{{ .Site.Params.giscus.theme | default "preferred_color_scheme" }}"
-    data-lang="{{ .Site.Params.giscus.lang | default "en" }}"
+    data-lang="{{ .Site.Params.giscus.lang | default .Language.Lang }}"
     data-loading="{{ .Site.Params.giscus.loading | default "lazy" }}"
     crossorigin="anonymous"
     async></script>

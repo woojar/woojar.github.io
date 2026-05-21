@@ -5,7 +5,7 @@ draft: false
 tags:
   - 中文
   - 测试
-categories: []
+categories: [中文]
 summary: ""
 ---
 

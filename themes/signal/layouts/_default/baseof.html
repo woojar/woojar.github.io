@@ -14,16 +14,16 @@
   </main>
 
   {{ partial "footer.html" . }}
-  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search" aria-labelledby="searchInput">
-    <button class="search-close" aria-label="Close search">×</button>
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="{{ i18n "search_placeholder" | default "Search" }}" aria-labelledby="searchInput">
+    <button class="search-close" aria-label="{{ i18n "close" | default "Close search" }}">×</button>
     <div class="search-modal">
       <div role="search">
-        <input type="text" class="search-input" placeholder="Search posts..." id="searchInput" autocomplete="off" aria-label="Search posts">
+        <input type="text" class="search-input" placeholder="{{ i18n "search_placeholder" | default "Search posts..." }}" id="searchInput" autocomplete="off" aria-label="{{ i18n "search_placeholder" | default "Search posts" }}">
       </div>
       <div class="search-results" id="searchResults" aria-live="polite"></div>
     </div>
   </div>
-  <button class="back-to-top" aria-label="Back to top">↑</button>
+  <button class="back-to-top" aria-label="{{ i18n "back_to_top" | default "Back to top" }}">↑</button>
   {{ partial "scripts.html" . }}
 </body>
 </html>
