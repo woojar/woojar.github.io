@@ -1,6 +1,7 @@
 ---
 title: "Migrating from Hexo to Hugo: A Two-Day Journey with a Custom Theme"
 date: 2026-05-19T22:53:44+08:00
+aliases: ["/2026/05/19/migrating-from-hexo-to-hugo/"]
 draft: false
 tags: ['hugo', 'hexo', 'static-site', 'github-pages', 'migration']
 categories: ["Tech"]

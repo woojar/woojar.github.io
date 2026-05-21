@@ -1,6 +1,7 @@
 ---
 title: "Happy new year"
 date: 2020-01-01T00:00:00+08:00
+aliases: ["/2020/01/01/happy-new-year/"]
 draft: false
 tags: ['new year']
 categories: ["Daily Life"]

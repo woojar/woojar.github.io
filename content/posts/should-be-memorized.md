@@ -1,6 +1,7 @@
 ---
 title: "should-be-memorized"
 date: 2022-12-10T00:00:00+08:00
+aliases: ["/2022/12/10/should-be-memorized/"]
 draft: false
 tags: ['daily life']
 categories: ["Daily Life"]

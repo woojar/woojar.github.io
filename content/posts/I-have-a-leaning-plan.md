@@ -1,6 +1,7 @@
 ---
 title: "I have a learning plan"
 date: 2023-12-25T00:00:00+08:00
+aliases: ["/2023/12/25/i-have-a-leaning-plan/"]
 draft: false
 tags: ['learning']
 categories: ["Learning"]

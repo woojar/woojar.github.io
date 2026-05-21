@@ -1,6 +1,7 @@
 ---
 title: "practice leetcode according to problem pattern"
 date: 2022-09-18T00:00:00+08:00
+aliases: ["/2022/09/18/practice-leecode-according-to-problem-pattern/"]
 draft: false
 tags: ['leetcode', 'pattern']
 categories: ["Learning"]

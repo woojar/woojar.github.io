@@ -1,6 +1,7 @@
 ---
 title: "vmware_vs_virtualbox"
 date: 2022-09-11T00:00:00+08:00
+aliases: ["/2022/09/11/vmware-vs-virtualbox/"]
 draft: false
 tags: ['tech']
 categories: ["Tech"]

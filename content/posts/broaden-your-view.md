@@ -1,6 +1,7 @@
 ---
 title: "broaden-your-view"
 date: 2024-02-24T00:00:00+08:00
+aliases: ["/2024/02/24/broaden-your-view/"]
 draft: false
 tags: ['thinking']
 categories: ["Thinking"]

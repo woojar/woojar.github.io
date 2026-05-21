@@ -1,6 +1,7 @@
 ---
 title: "Two Decades in Telecom Software Development"
 date: 2026-05-16T20:00:00+08:00
+aliases: ["/2026/05/16/telecom-engineering-journey/"]
 draft: false
 tags: ["telecom", "engineering", "career"]
 categories: ["Engineering"]

@@ -1,6 +1,7 @@
 ---
 title: "structured ways of thinking"
 date: 2024-02-05T00:00:00+08:00
+aliases: ["/2024/02/05/structured-ways-of-thinking/"]
 draft: false
 tags: ['thinking']
 categories: ["Thinking"]

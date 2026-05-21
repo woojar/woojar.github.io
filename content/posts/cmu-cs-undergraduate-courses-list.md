@@ -1,6 +1,7 @@
 ---
 title: "cmu-cs-undergraduate-courses-list"
 date: 2023-12-30T00:00:00+08:00
+aliases: ["/2023/12/30/cmu-cs-undergraduate-courses-list/"]
 draft: false
 tags: ['cmu', 'cs', 'courses', 'learning']
 categories: ["Learning"]
