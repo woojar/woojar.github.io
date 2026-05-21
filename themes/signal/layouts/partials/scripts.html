@@ -77,6 +77,31 @@
     setDarkTheme();
   }
 
+  // Language switcher
+  const languageToggle = document.querySelector('.language-toggle');
+  const languageMenu = document.querySelector('.language-menu');
+
+  if (languageToggle && languageMenu) {
+    languageToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      languageMenu.classList.toggle('show');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!languageToggle.contains(e.target) && !languageMenu.contains(e.target)) {
+        languageMenu.classList.remove('show');
+      }
+    });
+
+    // Close menu when clicking a language option
+    languageMenu.addEventListener('click', (e) => {
+      if (e.target.tagName === 'A') {
+        languageMenu.classList.remove('show');
+      }
+    });
+  }
+
   // Search functionality
   const searchToggle = document.querySelector('.search-toggle');
   const searchOverlay = document.getElementById('searchOverlay');

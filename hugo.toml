@@ -3,6 +3,80 @@ title = 'Woojar - Tech & Engineering Blog'
 theme = 'signal'
 defaultContentLanguage = 'en'
 enableEmoji = true
+ignoreFiles = ["obsidian-templates/*", ".obsidian/*"]
+
+[languages]
+  [languages.en]
+    contentDir = 'content/en'
+    label = 'English'
+    title = 'Woojar - Tech & Engineering Blog'
+    weight = 1
+    
+    [[languages.en.menus.main]]
+      name = "Home"
+      url = "/"
+      weight = 1
+      
+    [[languages.en.menus.main]]
+      name = "Posts"
+      url = "/posts/"
+      weight = 2
+      
+    [[languages.en.menus.main]]
+      name = "Tags"
+      url = "/tags/"
+      weight = 3
+      
+    [[languages.en.menus.main]]
+      name = "Categories"
+      url = "/categories/"
+      weight = 4
+      
+    [[languages.en.menus.main]]
+      name = "Archive"
+      url = "/archives/"
+      weight = 5
+      
+    [[languages.en.menus.main]]
+      name = "About"
+      url = "/about/"
+      weight = 6
+  [languages.zh]
+    contentDir = 'content/zh'
+    label = '中文'
+    title = 'Woojar - 技术与工程博客'
+    weight = 2
+    
+    [[languages.zh.menus.main]]
+      name = "主页"
+      url = "/"
+      weight = 1
+      
+    [[languages.zh.menus.main]]
+      name = "文章"
+      url = "/posts/"
+      weight = 2
+      
+    [[languages.zh.menus.main]]
+      name = "标签"
+      url = "/tags/"
+      weight = 3
+      
+    [[languages.zh.menus.main]]
+      name = "分类"
+      url = "/categories/"
+      weight = 4
+      
+    [[languages.zh.menus.main]]
+      name = "归档"
+      url = "/archives/"
+      weight = 5
+      
+    [[languages.zh.menus.main]]
+      name = "关于"
+      url = "/about/"
+      weight = 6
+title = "Woojar - 技术与工程博客"
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]

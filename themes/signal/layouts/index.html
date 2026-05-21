@@ -2,7 +2,7 @@
   <div class="hero">
     <div class="hero-content">
       <h1>{{ .Site.Title }}</h1>
-      <p>{{ .Site.Params.description }}</p>
+      <p>{{ i18n "site_description" | default .Site.Params.description }}</p>
     </div>
     <div class="tech-symbols">
       <span>⌨</span> <span>🖥</span> <span>📡</span>
@@ -10,23 +10,28 @@
   </div>
 
   <section class="recent-posts">
-    <h2>Latest Articles</h2>
-    {{ range first 5 (where .Site.RegularPages "Type" "posts").ByDate.Reverse }}
-      <article class="post-summary">
-        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-        <div class="post-meta">
-          <time>{{ .Date.Format "Jan 2, 2006" }}</time> |
-          <span>{{ .ReadingTime }} min read</span> |
-          <span>{{ .WordCount }} words</span>
-        </div>
-        <div class="post-summary-content">{{ .Summary | safeHTML }}</div>
-        <a href="{{ .RelPermalink }}" class="read-more">Read more →</a>
-      </article>
+    <h2>{{ i18n "latest_articles" | default "Latest Articles" }}</h2>
+    {{ $pages := where .Site.RegularPages "Section" "posts" }}
+    {{ if gt (len $pages) 0 }}
+      {{ range first 5 $pages.ByDate.Reverse }}
+        <article class="post-summary">
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <div class="post-meta">
+            <time>{{ .Date | time.Format ":date_long" }}</time> |
+            <span>{{ .ReadingTime }} min read</span> |
+            <span>{{ .WordCount }} words</span>
+          </div>
+          <div class="post-summary-content">{{ .Summary | safeHTML }}</div>
+          <a href="{{ .RelPermalink }}" class="read-more">{{ i18n "read_more" | default "Read more →" }}</a>
+        </article>
+      {{ end }}
+    {{ else }}
+      <p>{{ i18n "no_posts" | default "No posts found." }}</p>
     {{ end }}
   </section>
 
   <div class="view-all-posts">
-    <a href="{{ "posts/" | relURL }}" class="view-all-btn">← View all posts</a>
+    <a href="{{ relLangURL "posts/" }}" class="view-all-btn">{{ i18n "view_all_posts" | default "← View all posts" }}</a>
   </div>
 
   {{ partial "newsletter.html" . }}

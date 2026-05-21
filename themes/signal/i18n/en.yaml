@@ -11,6 +11,10 @@ nav_about: "About"
 
 # Common
 read_more: "Read more"
+site_description: "Telecom software engineer's tech blog - 20 years in telecom software development"
+latest_articles: "Latest Articles"
+view_all_posts: "View all posts"
+no_posts: "No posts found"
 back_to_top: "Back to top"
 search_placeholder: "Search posts..."
 no_results: "No results found"
