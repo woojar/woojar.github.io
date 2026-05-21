@@ -20,7 +20,8 @@ disableGitInfo = false
 disableHugoGeneratorInject = false
 logoIcon = "📡"
 footerTitle = "Woojar"
-footerDescription = "Expert insights and technical knowledge"
+  footerDescription = "Expert insights and technical knowledge"
+  footerLicense = "All code samples MIT Licensed."
 
 [params.analytics]
 id = ""
