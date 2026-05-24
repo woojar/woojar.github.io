@@ -9,19 +9,26 @@
     </div>
   </div>
 
-  <section class="recent-posts">
+  <section class="posts-list">
     <h2>{{ i18n "latest_articles" | default "Latest Articles" }}</h2>
     {{ $pages := where .Site.RegularPages "Section" "posts" }}
     {{ if gt (len $pages) 0 }}
       {{ range first 5 $pages.ByDate.Reverse }}
-        <article class="post-summary">
-          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-          <div class="post-meta">
-            <time>{{ .Date | time.Format ":date_long" }}</time> |
-            <span>{{ .ReadingTime }} min read</span> |
-            <span>{{ .WordCount }} words</span>
-          </div>
-          <div class="post-summary-content">{{ .Summary | safeHTML }}</div>
+        <article class="post-preview">
+          <header class="post-preview-header">
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            <div class="post-preview-meta">
+              <time>{{ .Date | time.Format ":date_long" }}</time>
+              {{ if .Params.tags }}
+                <span class="tags">
+                  {{ range first 3 .Params.tags }}
+                    <a href="{{ `tags/` | relLangURL }}{{ . | urlize }}">#{{ . }}</a>
+                  {{ end }}
+                </span>
+              {{ end }}
+            </div>
+          </header>
+          <div class="post-preview-content">{{ .Summary | safeHTML }}</div>
           <a href="{{ .RelPermalink }}" class="read-more">{{ i18n "read_more" | default "Read more →" }}</a>
         </article>
       {{ end }}
