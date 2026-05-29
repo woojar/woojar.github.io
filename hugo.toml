@@ -78,6 +78,13 @@ ignoreFiles = ["obsidian-templates/*", ".obsidian/*"]
       weight = 6
 title = "Woojar - 技术与工程博客"
 
+[markup]
+  [markup.highlight]
+    noClasses = true
+    style = "onedark"
+    lineNos = false
+    lineNumbersInTable = false
+
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 

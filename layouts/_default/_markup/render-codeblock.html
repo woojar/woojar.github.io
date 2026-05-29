@@ -1,0 +1,3 @@
+{{ if eq .Type "mermaid" }}
+<pre class="mermaid">{{ trim .Inner "\n\r " | safeHTML }}</pre>
+{{ else }}{{ highlight .Inner .Type }}{{ end }}
