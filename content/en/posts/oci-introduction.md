@@ -10,8 +10,6 @@ categories = ["tech"]
 # featured_image = ""
 +++
 
-# Understanding OCI: The Open Container Initiative
-
 ## What Is OCI?
 
 The **Open Container Initiative (OCI)** is a Linux Foundation project launched in June 2015 by Docker, CoreOS, and other container industry leaders. Its mission is to create open industry standards around container formats and runtimes.
