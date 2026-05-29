@@ -11,8 +11,8 @@ A telecom software engineer's tech blog built with Hugo using a custom "TelecomT
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/woojar/woojar-blog.git
-   cd woojar-blog
+   git clone https://github.com/woojar/woojar.github.io.git
+   cd woojar.github.io
    ```
 
 2. Start the development server:
