@@ -8,6 +8,7 @@
           {{ .Title }}
         {{ end }}
       </h1>
+      <p class="section-description">{{ len .Pages }} {{ i18n "posts" | default "posts" }}</p>
     </header>
     {{ range .Paginator.Pages.ByDate.Reverse }}
       <article class="post-preview">
@@ -24,7 +25,7 @@
             {{ end }}
           </div>
         </header>
-        <div class="post-preview-content">{{ .Summary | safeHTML }}</div>
+        <div class="post-preview-content markdown-content">{{ .Summary | safeHTML }}</div>
         <a href="{{ .RelPermalink }}" class="read-more">{{ i18n "read_more" | default "Read more →" }}</a>
       </article>
     {{ end }}

@@ -13,6 +13,8 @@ After spending two days migrating my blog from Hexo to Hugo, I'm excited to shar
 
 This post covers the migration process, highlights the key differences between Hexo and Hugo, and introduces the Signal theme along with the GitHub Actions deployment workflow.
 
+<!--more-->
+
 ## The Signal Theme
 
 The **Signal** theme is a modern Hugo blog theme built specifically for technical writers and engineers. It features:

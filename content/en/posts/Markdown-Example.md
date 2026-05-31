@@ -80,6 +80,9 @@ int main()
 ```
 
 ## Tables
+
+<!--more-->
+
 | Feature | Syntax |
 | :--- | :--- |
 | Bold | `**text**` |

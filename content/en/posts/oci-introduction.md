@@ -24,6 +24,8 @@ OCI governs three core specifications:
 
 These three specs define the complete lifecycle of a container: **build → ship → run**.
 
+<!--more-->
+
 ---
 
 ## Why OCI? — The Problem It Solves

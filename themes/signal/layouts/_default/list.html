@@ -28,7 +28,7 @@
             {{ end }}
           </div>
         </header>
-        <div class="post-preview-content">{{ .Summary | safeHTML }}</div>
+        <div class="post-preview-content markdown-content">{{ .Summary | safeHTML }}</div>
         <a href="{{ .RelPermalink }}" class="read-more">{{ i18n "read_more" | default "Read more →" }}</a>
       </article>
     {{ end }}

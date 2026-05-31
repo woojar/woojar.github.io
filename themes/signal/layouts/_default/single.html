@@ -23,7 +23,7 @@
       </div>
     </header>
     {{ .TableOfContents }}
-    <div class="post-content">
+    <div class="post-content markdown-content">
       {{ .Content }}
     </div>
   </article>
@@ -48,7 +48,7 @@
               <time>{{ .Date | time.Format ":date_long" }}</time>
             </div>
           </header>
-          <div class="post-preview-content">
+          <div class="post-preview-content markdown-content">
             {{ .Summary }}
             {{ if .Truncated }}
               <a href="{{ .RelPermalink }}" class="read-more">{{ i18n "read_more" | default "Read more →" }}</a>
@@ -71,7 +71,7 @@
               <time>{{ .Date | time.Format ":date_long" }}</time>
             </div>
           </header>
-          <div class="post-preview-content">
+          <div class="post-preview-content markdown-content">
             {{ .Summary }}
             {{ if .Truncated }}
               <a href="{{ .RelPermalink }}" class="read-more">{{ i18n "read_more" | default "Read more →" }}</a>
