@@ -1,7 +1,7 @@
 +++
 title = "Introduction to WeChat Mini Program Development"
 date = 2026-06-15T00:00:00Z
-draft = true
+draft = false
 
 # Optional fields
 summary = "A comprehensive guide to building WeChat Mini Programs, from project structure to production deployment, using a complete e-commerce solution as a practical example."
