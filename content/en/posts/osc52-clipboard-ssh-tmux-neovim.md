@@ -74,10 +74,10 @@ The patch does two things:
 - Increases `VTE_SEQ_STRING_MAX_CAPACITY` from `(1 << 12)` to `(1 << 21)` (~2M codepoints, supports 1MB clipboard content after base64 encoding)
 - Implements the actual OSC 52 clipboard handler in `src/vteseq.cc` (decodes base64, sets clipboard/primary selection)
 
-**Arch Linux PKGBUILD + patch:** https://github.com/user/vte-osc52-patch
+**Arch Linux PKGBUILD + patch:** https://github.com/woojar/vte-osc52-patch
 
 ```bash
-git clone https://github.com/user/vte-osc52-patch.git
+git clone https://github.com/woojar/vte-osc52-patch.git
 cd vte-osc52-patch
 makepkg -sf --nocheck
 sudo pacman -U vte-common-*.pkg.tar.zst vte3-*.pkg.tar.zst
