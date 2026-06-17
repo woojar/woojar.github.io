@@ -1,6 +1,6 @@
 +++
 title = "SSH + tmux + Neovim + OSC 52 Clipboard Guide"
-date = 2026-06-17T22:23:00+08:00
+date = 2026-06-17T13:05:00+08:00
 draft = false
 
 tags = ["neovim", "tmux", "ssh", "clipboard", "terminal"]
