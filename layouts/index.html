@@ -1,0 +1,47 @@
+{{ define "main" }}
+  <div class="hero">
+    <div class="hero-content">
+      <h1>{{ .Site.Title }}</h1>
+      <p>{{ i18n "site_description" | default .Site.Params.description }}</p>
+    </div>
+    <div class="tech-symbols">
+      <span>⌨</span> <span>🖥</span> <span>📡</span>
+    </div>
+  </div>
+
+  {{ partial "external-sites.html" . }}
+
+  <section class="posts-list">
+    <h2>{{ i18n "latest_articles" | default "Latest Articles" }}</h2>
+    {{ $pages := where .Site.RegularPages "Section" "posts" }}
+    {{ if gt (len $pages) 0 }}
+      {{ range first 5 $pages.ByDate.Reverse }}
+        <article class="post-preview">
+          <header class="post-preview-header">
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            <div class="post-preview-meta">
+              <time>{{ .Date | time.Format ":date_long" }}</time>
+              {{ if .Params.tags }}
+                <span class="tags">
+                  {{ range first 3 .Params.tags }}
+                    <a href="{{ `tags/` | relLangURL }}{{ . | urlize }}">#{{ . }}</a>
+                  {{ end }}
+                </span>
+              {{ end }}
+            </div>
+          </header>
+          <div class="post-preview-content markdown-content">{{ .Summary | safeHTML }}</div>
+          <a href="{{ .RelPermalink }}" class="read-more">{{ i18n "read_more" | default "Read more →" }}</a>
+        </article>
+      {{ end }}
+    {{ else }}
+      <p>{{ i18n "no_posts" | default "No posts found." }}</p>
+    {{ end }}
+  </section>
+
+  <div class="view-all-posts">
+    <a href="{{ relLangURL "posts/" }}" class="view-all-btn">{{ i18n "view_all_posts" | default "← View all posts" }}</a>
+  </div>
+
+  {{ partial "newsletter.html" . }}
+{{ end }}

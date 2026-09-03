@@ -1,0 +1,131 @@
+{{- /*
+  external-sites.html — feature cards linking to companion sites outside this blog.
+  Driven by [[languages.<lang>.params.externalSites]] in hugo.toml, so adding a
+  destination needs no template change. Styles are scoped and inlined here to keep
+  the vendored theme's CSS untouched; the partial renders on the home page only.
+*/ -}}
+{{- $sites := .Site.Params.externalSites -}}
+{{- with $sites }}
+<section class="companion-sites" aria-label="{{ if eq $.Language.Lang "zh" }}站外站点{{ else }}Companion sites{{ end }}">
+  {{- range . }}
+    {{- if .url }}
+    <article class="companion-card">
+      <span class="companion-icon" aria-hidden="true">{{ .icon | default "🔗" }}</span>
+      <div class="companion-body">
+        {{- with .eyebrow }}<p class="companion-eyebrow">{{ . }}</p>{{ end }}
+        <h2 class="companion-title">
+          <a href="{{ .url }}">{{ .name }}<span class="companion-arrow" aria-hidden="true">↗</span></a>
+        </h2>
+        {{- with .description }}<p class="companion-desc">{{ . }}</p>{{ end }}
+      </div>
+      <a class="companion-cta" href="{{ .url }}" aria-label="{{ .cta | default "Visit" }} — {{ .name }}">
+        {{ .cta | default "Visit" }}
+      </a>
+    </article>
+    {{- end }}
+  {{- end }}
+</section>
+<style>
+  .companion-sites {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1rem;
+    margin: 0 0 3rem;
+  }
+  .companion-card {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(16, 185, 129, 0.05));
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .companion-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+  }
+  .companion-icon {
+    font-size: 1.75rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .companion-body {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .companion-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin: 0 0 0.2rem;
+  }
+  .companion-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  .companion-title a {
+    color: var(--text);
+  }
+  .companion-title a:hover {
+    color: var(--primary);
+  }
+  .companion-arrow {
+    font-size: 0.8em;
+    margin-left: 0.3rem;
+    color: var(--text-secondary);
+  }
+  .companion-desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0.35rem 0 0;
+  }
+  .companion-cta {
+    flex-shrink: 0;
+    padding: 0.5rem 1.1rem;
+    border: 2px solid var(--primary);
+    border-radius: var(--radius);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary);
+    white-space: nowrap;
+    transition: background 0.2s, color 0.2s;
+  }
+  .companion-cta:hover,
+  .companion-cta:focus-visible {
+    background: var(--primary);
+    color: #fff;
+  }
+  @media (max-width: 480px) {
+    .companion-sites {
+      grid-template-columns: 1fr;
+    }
+    .companion-card {
+      flex-wrap: wrap;
+      gap: 0.75rem 1rem;
+    }
+    .companion-cta {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .companion-card,
+    .companion-cta {
+      transition: none;
+    }
+    .companion-card:hover {
+      transform: none;
+    }
+  }
+</style>
+{{- end }}

@@ -36,11 +36,25 @@ ignoreFiles = ["obsidian-templates/*", ".obsidian/*"]
       name = "Archive"
       pageRef = "archives"
       weight = 5
-      
+
+    [[languages.en.menus.main]]
+      name = "Tech Trends"
+      url = "https://woojar.com/technical-trend/"
+      weight = 6
+
     [[languages.en.menus.main]]
       name = "About"
       pageRef = "about"
-      weight = 6
+      weight = 7
+
+    # Companion sites shown as feature cards on the homepage
+    [[languages.en.params.externalSites]]
+      name = "Tech Trends"
+      url = "https://woojar.com/technical-trend/"
+      icon = "📈"
+      eyebrow = "Companion site"
+      description = "A weekly digest of what happened across Hacker News, GitHub and arXiv — auto-curated, every summary links to its source."
+      cta = "Read the latest issue"
   [languages.zh]
     contentDir = 'content/zh'
     label = '中文'
@@ -71,12 +85,24 @@ ignoreFiles = ["obsidian-templates/*", ".obsidian/*"]
       name = "归档"
       pageRef = "archives"
       weight = 5
-      
+
+    [[languages.zh.menus.main]]
+      name = "技术趋势"
+      url = "https://woojar.com/technical-trend/"
+      weight = 6
+
     [[languages.zh.menus.main]]
       name = "关于"
       pageRef = "about"
-      weight = 6
-title = "Woojar - 技术与工程博客"
+      weight = 7
+
+    [[languages.zh.params.externalSites]]
+      name = "技术趋势"
+      url = "https://woojar.com/technical-trend/"
+      icon = "📈"
+      eyebrow = "姊妹站点"
+      description = "每周汇总 Hacker News、GitHub 与 arXiv 上值得关注的动态，每条摘要都可回溯原始出处。"
+      cta = "查看最新一期"
 
 [markup]
   [markup.highlight]
